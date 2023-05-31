@@ -1,12 +1,17 @@
 #Ejercicio10
-lista_de_números= []
-def ciclo( ):
+#Entrada de datos
+Acumulador = 0
+Contador = 0
+#Operaciones
+while True:
  número= int(input("Insertar un número entero"))
  if (número >= 0):
-  lista_de_números.append(número)
-
-  return ciclo() 
- else: 
-  promedio = sum(lista_de_números) / len(lista_de_números)
-  return print(promedio)
-ciclo()
+  Acumulador = número + Acumulador
+  Contador +=1
+ elif(Contador == 0 and número < 0):
+  # Error
+  print("No hay número para dividir")
+ else:  
+  break 
+  #Salida de datos
+print ("Tu promedio es de ", Acumulador/ Contador)
